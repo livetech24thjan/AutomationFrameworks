@@ -12,12 +12,29 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 	
 public WebDriver driver;
 	
-	@BeforeMethod
+	public static FileInputStream fis1;
+	public static Properties locatorsProp;
+
+	@BeforeTest
+	public void readPropertiesFiles() throws IOException
+	{
+		
+		fis1=new FileInputStream("src\\test\\resources\\properties\\locators.properties");
+		locatorsProp=new Properties();
+		locatorsProp.load(fis1);
+		
+		
+		System.out.println("End of BeforeTest ..");
+		
+	}
+
+
 	public void setUp()
 	{
 		FileInputStream fis = null;
@@ -60,7 +77,7 @@ public WebDriver driver;
 		
 	}
 	
-	@AfterMethod
+	
 	public void teardown()
 	{
 		driver.quit();
