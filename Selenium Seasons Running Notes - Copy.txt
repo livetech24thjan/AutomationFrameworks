@@ -3084,11 +3084,51 @@ src/test/resources
 
 								
 								
+Keyword Driven Framework :
+
+keywords(methods defined for steps in Test Cases) are driving the test scripts 								
 								
-								
 
 
+Page Object Model : 
 
 
+this is not a framework , this is a design pattern applied to framework
 
+Page means WebPage or Screen or journeys
+
+
+POM is also called Object Repository Model 
+
+Create a Java class for each page and declare the weblements and methods in that class 
+
+
+We are using Page Object Model using PageFactory 
+
+here we have annotations to create WebElement 
+
+
+@FindBy(xpath="//input[@name='username']")
+WebElement usernameTextbox;
+
+this is same as below statement 
+
+WebElement usernameTextbox=driver.findElement(By.xpath("//input[@name='username']"));
+
+
+Listeners :
+
+Reporting tools or Reporting Mechanism :
+
+ExtentReports
+
+Allure Reports 
+
+ExtentReports :
+
+three Classes 
+
+ExtentReports(C)
+ExtentTest(C)
+ExtentSparkReporter(C)
 

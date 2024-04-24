@@ -10,21 +10,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import utils.ExtentManager;
+
 public class BaseTest {
 	
-public WebDriver driver;
+	public static WebDriver driver;
 	
 	public static FileInputStream fis1;
 	public static Properties locatorsProp;
+	public static ExtentReports reports;
+	public static ExtentTest test;
 
 	@BeforeTest
 	public void readPropertiesFiles() throws IOException
 	{
-		
+		reports=ExtentManager.getReports();
 		fis1=new FileInputStream("src\\test\\resources\\properties\\locators.properties");
 		locatorsProp=new Properties();
 		locatorsProp.load(fis1);
@@ -34,9 +44,13 @@ public WebDriver driver;
 		
 	}
 
-
-	public void setUp()
+	@BeforeMethod
+	public void setUp(ITestContext context)
 	{
+		
+		test=reports.createTest(context.getCurrentXmlTest().getName());
+		
+		
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\config.properties");
@@ -59,17 +73,22 @@ public WebDriver driver;
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();
+			test.log(Status.INFO, "Started the browser " + browserName);
 		}
 		else if(browserName.equalsIgnoreCase("firefox"))
 		{
 			driver=new FirefoxDriver();
+			test.log(Status.INFO, "Started the browser " + browserName);
 		}
 		else  if(browserName.equalsIgnoreCase("edge"))
 		{
 			driver=new EdgeDriver();
+			test.log(Status.INFO, "Started the browser " + browserName);
 		}
 		
 		driver.get(configProp.getProperty("url"));
+		
+		test.log(Status.INFO, "App is launched using url  " + configProp.getProperty("url"));
 		
 		driver.manage().window().maximize();
 		
@@ -77,10 +96,19 @@ public WebDriver driver;
 		
 	}
 	
-	
+	@AfterMethod
 	public void teardown()
 	{
 		driver.quit();
+	}
+	
+	@AfterTest
+	public void closeReports()
+	{
+		if(reports!=null)
+		{
+			reports.flush();
+		}
 	}
 	
 
