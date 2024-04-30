@@ -2,39 +2,46 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-25T09:52:58 IST" name="Default suite" finished-at="2024-04-25T09:53:10 IST" duration-ms="11676">
+  <suite started-at="2024-04-30T10:05:30 IST" name="Suite" finished-at="2024-04-30T10:06:18 IST" duration-ms="47600">
     <groups>
     </groups>
-    <test started-at="2024-04-25T09:52:58 IST" name="Default test" finished-at="2024-04-25T09:53:10 IST" duration-ms="11676">
-      <class name="testscripts.regression.ValidateLogin">
-        <test-method is-config="true" signature="readPropertiesFiles()[pri:0, instance:testscripts.regression.ValidateLogin@5afa3c9]" started-at="2024-04-25T09:52:58 IST" name="readPropertiesFiles" finished-at="2024-04-25T09:52:59 IST" duration-ms="304" status="PASS">
+    <test started-at="2024-04-30T10:05:30 IST" name="Test" finished-at="2024-04-30T10:06:18 IST" duration-ms="47600">
+      <class name="testscripts.regression.ValidateSelectHotelUsingPOMDataProvider">
+        <test-method is-config="true" signature="readPropertiesFiles()[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@70ed52de]" started-at="2024-04-30T10:05:30 IST" name="readPropertiesFiles" finished-at="2024-04-30T10:05:31 IST" duration-ms="591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readPropertiesFiles -->
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:testscripts.regression.ValidateLogin@5afa3c9]" started-at="2024-04-25T09:52:59 IST" name="setUp" finished-at="2024-04-25T09:53:08 IST" duration-ms="9578" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@70ed52de]" started-at="2024-04-30T10:05:32 IST" name="setUp" finished-at="2024-04-30T10:05:40 IST" duration-ms="7643" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5a49af50]]>
+                <![CDATA[org.testng.TestRunner@353e6389]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateLoginTest()[pri:0, instance:testscripts.regression.ValidateLogin@5afa3c9]" started-at="2024-04-25T09:53:08 IST" name="validateLoginTest" finished-at="2024-04-25T09:53:09 IST" duration-ms="979" status="PASS">
+        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@70ed52de]" started-at="2024-04-30T10:05:40 IST" name="validateLoginTest" data-provider="getData" finished-at="2024-04-30T10:06:16 IST" duration-ms="36501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Check Out Date=27/07/2023, Adults per Room=2 - Two, Check In Date=26/07/2023, Expected Title1=Adactin.com - Search Hotel, Children per Room=0 - None, Expected Title2=Adactin.com - Select Hotel, Hotels=Hotel Sunshine, password=reyaz123, Room Type=Standard, Number of Rooms=1 - One, username=reyaz0806, Location=Sydney}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateLogin@5afa3c9]" started-at="2024-04-25T09:53:09 IST" name="teardown" finished-at="2024-04-25T09:53:09 IST" duration-ms="316" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@70ed52de]" started-at="2024-04-30T10:06:16 IST" name="teardown" finished-at="2024-04-30T10:06:17 IST" duration-ms="607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="closeReports()[pri:0, instance:testscripts.regression.ValidateLogin@5afa3c9]" started-at="2024-04-25T09:53:09 IST" name="closeReports" finished-at="2024-04-25T09:53:10 IST" duration-ms="449" status="PASS">
+        <test-method is-config="true" signature="closeReports()[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@70ed52de]" started-at="2024-04-30T10:06:17 IST" name="closeReports" finished-at="2024-04-30T10:06:18 IST" duration-ms="666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReports -->
-      </class> <!-- testscripts.regression.ValidateLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testscripts.regression.ValidateSelectHotelUsingPOMDataProvider -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-30T10:16:21 IST" name="Suite" finished-at="2024-04-30T10:17:11 IST" duration-ms="49829">
+    <groups>
+    </groups>
+    <test started-at="2024-04-30T10:16:21 IST" name="Test" finished-at="2024-04-30T10:17:11 IST" duration-ms="49829">
+      <class name="testscripts.regression.ValidateSelectHotelUsingPOMDataProvider">
+        <test-method is-config="true" signature="readPropertiesFiles()[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@72035809]" started-at="2024-04-30T10:16:22 IST" name="readPropertiesFiles" finished-at="2024-04-30T10:16:22 IST" duration-ms="625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFiles -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@72035809]" started-at="2024-04-30T10:16:24 IST" name="setUp" finished-at="2024-04-30T10:16:34 IST" duration-ms="10205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@53a50b0a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@72035809]" started-at="2024-04-30T10:16:34 IST" name="validateLoginTest" data-provider="getData" finished-at="2024-04-30T10:17:10 IST" duration-ms="35836" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Check Out Date=27/07/2023, Adults per Room=2 - Two, Check In Date=26/07/2023, Expected Title1=Adactin.com - Search Hotel, Children per Room=0 - None, Expected Title2=Adactin.com - Select Hotel, Hotels=Hotel Sunshine, password=reyaz123, Room Type=Standard, Number of Rooms=1 - One, username=reyaz0806, Location=Sydney}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@72035809]" started-at="2024-04-30T10:17:10 IST" name="teardown" finished-at="2024-04-30T10:17:11 IST" duration-ms="374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="closeReports()[pri:0, instance:testscripts.regression.ValidateSelectHotelUsingPOMDataProvider@72035809]" started-at="2024-04-30T10:17:11 IST" name="closeReports" finished-at="2024-04-30T10:17:11 IST" duration-ms="671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReports -->
+      </class> <!-- testscripts.regression.ValidateSelectHotelUsingPOMDataProvider -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
